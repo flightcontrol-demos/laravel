@@ -27,8 +27,9 @@ export default {
         <div class="home-page">
             <div class="banner">
                 <div class="container">
-                    <h1 class="logo-font">conduit</h1>
-                    <p>A place to share your knowledge.</p>
+                    <h1 class="logo-font">Keep Learning</h1>
+                    <p>Share your knowledge.</p>
+                     <b-col lg="4" class="pb-2" variant="outline-primary"><b-button href="#">Start Reading</b-button></b-col>
                 </div>
             </div>
 

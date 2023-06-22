@@ -17,8 +17,8 @@ export default {
         <div class="home-page">
             <div class="banner">
                 <div class="container">
-                    <h1 class="logo-font">conduit</h1>
-                    <p>A place to share your knowledge.</p>
+                    <h1 class="logo-font">Keep Learning</h1>
+                    <p>Share your knowledge.</p>
                 </div>
             </div>
 
