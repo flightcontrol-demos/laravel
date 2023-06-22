@@ -426,7 +426,53 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .container {
   width: 100%;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction:column;
+  align-content:flex-start;
+  text-align:start;
 }
+
+.home-page .banner p{
+  width: 80%;
+  text-align: start;
+}
+.home-page .banner h1 {
+  width: 80%;
+  text-align: start;
+}
+
+.home-page .banner {
+  background-color: #013EB2;
+}
+
+.container .page{
+  width: 80%;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  color: #ffffff!important;
+}
+
+.nav{
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar {
+  width: 100%;
+  background-color: #013EB2;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  color:#fff;
+}
+
 @media (min-width: 640px) {
 
   .container {

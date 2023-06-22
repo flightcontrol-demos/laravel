@@ -17,7 +17,9 @@ export default {
     <div>
         <nav class="navbar navbar-light">
             <div class="container">
-                <Link class="navbar-brand" href="/">conduit</Link>
+                <Link class="navbar-brand">
+                    <img src="images/fc-logo.png" />
+                </Link>
                 <ul class="nav navbar-nav pull-xs-right">
                     <li class="nav-item">
                         <!-- Add "active" class when you're on that page" -->
@@ -45,7 +47,7 @@ export default {
         <main><slot /></main>
         <footer>
             <div class="container">
-                <Link href="/" class="logo-font">conduit</Link>
+                <Link href="/" class="logo-font">Flightcontrol</Link>
                 <span class="attribution">
                     An interactive learning project from
                     <a href="https://thinkster.io">Thinkster</a>. Code &amp;
