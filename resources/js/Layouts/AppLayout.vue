@@ -39,7 +39,7 @@ export default {
                         <Link class="nav-link" href="/login">Sign in</Link>
                     </li>
                     <li class="nav-item" v-if="user === null">
-                        <Link class="nav-link" href="/register">Sign up</Link>
+                        <Link class="nav-link" href="/register">Get Started</Link>
                     </li>
                 </ul>
             </div>

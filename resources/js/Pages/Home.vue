@@ -29,7 +29,7 @@ export default {
                 <div class="container">
                     <h1 class="logo-font">Keep Learning</h1>
                     <p>Share your knowledge.</p>
-                     <b-col lg="4" class="pb-2" variant="outline-primary"><b-button href="#">Start Reading</b-button></b-col>
+                     <button lg="4" class="pb-2" variant="outline-primary"><b-button href="#">Start Reading</b-button></button>
                 </div>
             </div>
 

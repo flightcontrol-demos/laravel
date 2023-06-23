@@ -25,10 +25,10 @@ export default {
             <div class="container page">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 col-xs-12">
-                        <h1 class="text-xs-center">Sign up</h1>
-                        <p class="text-xs-center">
+                        <h1 class="text-xs-center">Sign up</h1><br/>
+                        <p class="text-xs">
                             <Link href="/login">Have an account?</Link>
-                        </p>
+                        </p><br/>
 
                         <form @submit.prevent="form.post('/register')">
                             <fieldset class="form-group">

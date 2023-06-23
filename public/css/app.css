@@ -444,10 +444,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .home-page .banner {
   background-color: #013EB2;
+  padding-top: 120px;
+}
+
+.auth-page {
+  padding-top: 120px;
 }
 
 .container .page{
   width: 80%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3717FF;
+  border-color: #3717FF;
 }
 
 .navbar-brand {
@@ -464,6 +475,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .navbar {
   width: 100%;
   background-color: #013EB2;
+  position: fixed;
+  top:0;
+  width:100%;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -471,6 +485,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction:row;
   justify-content: flex-end;
   color:#fff;
+}
+
+.btn-outline-primary {
+  color: #013EB2;
+  background-image: none;
+  background-color: transparent;
+  border-color: #013EB2;
+}
+
+.nav-pills.outline-active .nav-link.active {
+  background: #fff!important;
+  border-bottom: 2px solid #013EB2!important;
+  color: #013EB2!important;
+}
+
+.text-xs-center{
+  font-size: 80px;
+  color:#013EB2;
+}
+
+.text-xs {
+  text-align: center;
 }
 
 @media (min-width: 640px) {
@@ -625,6 +661,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-2 {
   padding-bottom: 0.5rem;
+  background-color: #000000;
+  border-radius: 50px;
+  margin: 4px 2px;
+  padding: 10px;
+  width:15%;
+}
+.button .pb-2 {
+
 }
 .text-center {
   text-align: center;
