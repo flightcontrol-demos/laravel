@@ -13,7 +13,7 @@ class ArticleFeedController extends Controller
             'articles' => Article::query()
                 ->with(['tags','user'])
                 ->withCount(['comments','users'])
-                ->whereBelongsTo(Auth::user()->users()->pluck('id'))
+                ->whereBelongsTo(Auth::user())
                 ->latest()
                 ->get(),
         ]);

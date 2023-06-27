@@ -433,6 +433,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align:start;
 }
 
+.contain {
+  width: 100%;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction:row;
+  align-content:flex-start;
+  text-align:start;
+}
+
 .home-page .banner p{
   width: 80%;
   text-align: start;
@@ -463,9 +472,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .navbar-brand {
   display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
-  color: #ffffff!important;
+  margin-right: auto - 1;
+  padding-right: 5%;
 }
 
 .nav{
@@ -480,11 +488,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   width:100%;
 }
 
+nav.navbar{
+  padding: 40px 100px;
+  background-color: #ffff;
+}
+nav.navbar ul li{
+  
+}
+
 .navbar-light .navbar-nav .nav-link{
   display: flex;
   flex-direction:row;
   justify-content: flex-end;
   color:#fff;
+}
+
+.pull-xs-right{
+  margin-left:auto;
 }
 
 .btn-outline-primary {
@@ -505,6 +525,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   color:#013EB2;
 }
 
+.editor-page{
+  padding:120px;
+}
+
+.settings-page{
+  padding:120px;
+}
 .text-xs {
   text-align: center;
 }

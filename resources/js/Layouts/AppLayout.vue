@@ -1,11 +1,13 @@
 <script>
 import { Head, Link, usePage } from "@inertiajs/inertia-vue3";
 import { computed } from "vue";
+
 console.log(usePage().props.value);
 export default {
     components: {
         Head,
         Link,
+        
     },
     setup() {
         const user = computed(() => usePage().props.value.auth.user);
@@ -16,11 +18,12 @@ export default {
 <template>
     <div>
         <nav class="navbar navbar-light">
-            <div class="container">
-                <Link class="navbar-brand">
-                    <img src="images/fc-logo.png" />
-                </Link>
-                <ul class="nav navbar-nav pull-xs-right">
+            <div class="contain"> 
+                <a class="navbar-brand" >
+                        <img  width="160" height="40" decoding="async" data-nimg="1" src="../../images/fc-logo-white-wordmark.svg" >
+                </a>
+                <ul class="nav navbar-nav pull-xs-right"> 
+                   
                     <li class="nav-item">
                         <!-- Add "active" class when you're on that page" -->
                         <Link href="/" class="nav-link">Home</Link>
@@ -44,6 +47,7 @@ export default {
                 </ul>
             </div>
         </nav>
+
         <main><slot /></main>
         <footer>
             <div class="container">
