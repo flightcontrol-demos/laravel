@@ -482,6 +482,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: #3717FF;
 }
 
+.btn-primary:focus{
+  background-image: linear-gradient(to right, #3717FF 0%, #3717FE 51%, #275E2D 100%);
+}
+
+.btn-primary:hover{
+  background-image: linear-gradient(to right, #275E2D 0%, #246E70 51%, #3717FF 100%);
+}
+
 .navbar-brand {
   display: flex;
   margin-right: 30%;

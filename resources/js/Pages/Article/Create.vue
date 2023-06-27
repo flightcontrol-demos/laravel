@@ -63,8 +63,11 @@ export default {
                                     class="btn btn-lg pull-xs-right btn-primary"
                                     type="button"
                                     :disabled="form.processing"
-                                >
+                                ><Link href="
+                                        route('tags.show', { slug: tag.slug })
+                                    ">
                                     Publish Article
+                                </Link>
                                 </button>
                             </fieldset>
                         </form>
