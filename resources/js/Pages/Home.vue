@@ -27,8 +27,8 @@ export default {
         <div class="home-page">
             <div class="banner">
                 <div class="container">
-                    <h1 class="logo-font"  style="font-family: 'Inter', sans-serif;">Keep Learning</h1>
-                    <p>Share your knowledge.</p>
+                    <h1 class="logo-font"  style="font-family: 'Inter', Cambria, Times;">Keep Learning</h1>
+                    <p style="font-family: sohne, 'Helvetica Neue', Helvetica, Cambria, sans-serif;">Explore narratives, thoughts, and knowledge shared<br/> by authors covering a wide range of subjects.</p>
                     <button class="pb-2" variant="outline-primary" >
                         <Link href="/login">Start Reading</Link>
                     </button>
