@@ -27,9 +27,11 @@ export default {
         <div class="home-page">
             <div class="banner">
                 <div class="container">
-                    <h1 class="logo-font">Keep Learning</h1>
+                    <h1 class="logo-font"  style="font-family: 'Inter', sans-serif;">Keep Learning</h1>
                     <p>Share your knowledge.</p>
-                     <button lg="4" class="pb-2" variant="outline-primary"><b-button href="#">Start Reading</b-button></button>
+                    <button class="pb-2" variant="outline-primary" >
+                        <Link href="/login">Start Reading</Link>
+                    </button>
                 </div>
             </div>
 

@@ -17,7 +17,7 @@ export default {
 </script>
 <template>
     <div>
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-light " >
             <div class="contain"> 
                 <a class="navbar-brand" >
                         <img  width="160" height="40" decoding="async" data-nimg="1" src="../../images/fc-logo-white-wordmark.svg" >
@@ -53,9 +53,8 @@ export default {
             <div class="container">
                 <Link href="/" class="logo-font">Flightcontrol</Link>
                 <span class="attribution">
-                    An interactive learning project from
-                    <a href="https://thinkster.io">Thinkster</a>. Code &amp;
-                    design licensed under MIT.
+                   Self-manage your AWS infrastructure, saving time, money, and nerves.
+                    <a href="https://www.flightcontrol.dev/">Flightcontrol</a>
                 </span>
             </div>
         </footer>
