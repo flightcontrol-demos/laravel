@@ -14,7 +14,13 @@ export default {
             content: null,
             tags: null,
         });
-        return { form };
+        const submitForm = () => {
+            form.post("/articles", {
+                // Include the CSRF token in the request data
+                _token: "{{ csrf_token() }}", // Replace with your server-side code to retrieve the CSRF token
+            });
+        };
+        return { form,  submitForm};
     },
 };
 </script>
@@ -38,7 +44,7 @@ export default {
                                     <input
                                         type="text"
                                         class="form-control"
-                                        placeholder="What's this article about?"
+                                        placeholder="What's this post about?"
                                         v-model="form.excerpt"
                                     />
                                 </fieldset>
@@ -62,12 +68,9 @@ export default {
                                 <button
                                     class="btn btn-lg pull-xs-right btn-primary"
                                     type="button"
-                                    :disabled="form.processing"
-                                ><Link href="
-                                        route('tags.show', { slug: tag.slug })
-                                    ">
+                                    @click="submitForm()"
+                                >
                                     Publish Article
-                                </Link>
                                 </button>
                             </fieldset>
                         </form>

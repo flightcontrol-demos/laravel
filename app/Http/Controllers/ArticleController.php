@@ -45,10 +45,11 @@ class ArticleController extends Controller
         ]);
 
         request()->whenFilled('tags', function () use ($article) {
-            str(request('tags'))->split(',')->map(function ($tag) use ($article) {
+            $tags = explode(',', request('tags'));
+            array_map(function ($tag) use ($article) {
                 $article->tags()->attach(Tag::firstOrCreate(['name' => $tag]));
-            });
-        });
+            }, $tags);
+        });      
 
         return redirect()->route('articles.edit', ['article' => $article]);
     }

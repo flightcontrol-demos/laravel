@@ -510,13 +510,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom: solid #292929;
   border-bottom-width: 1px;
   transition: all .2s ease-in-out;
-  &.onScroll {
-    box-shadow: 0 0 10px #aaa;
-    background-color: #fff;
-    ul li {
-      color: #10b761;
-    }
-  }
+  z-index:1;
 }
 
 .navbar-scroll {
