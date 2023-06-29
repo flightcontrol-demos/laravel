@@ -9,6 +9,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HealthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/health', [HealthController::class, '__invoke'])->name('health');
 Route::get('feed', ArticleFeedController::class)->name('feed');
 Route::get('articles', [ArticleController::class,'index']);
 Route::get('articles/create', [ArticleController::class,'create'])->middleware(['auth'])->name('articles.create');
