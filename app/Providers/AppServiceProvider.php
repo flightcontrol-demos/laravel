@@ -9,6 +9,9 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
+// add this to the top of the file
+use Illuminate\Support\Facades\URL;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if($this->app->environment('production')) {
+            URL::forceScheme('https');
+        };
         Model::preventLazyLoading(! app()->environment('production'));
         Relation::enforceMorphMap([
             'article' => Article::class,
