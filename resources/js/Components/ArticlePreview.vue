@@ -18,7 +18,6 @@ export default {
     <div class="article-preview">
         <div class="article-meta">
             <Link :href="route('users.show', { name: article.user.name })">
-                <img :src="article.user.avatar_url" />
             </Link>
             <div class="info">
                 <Link
