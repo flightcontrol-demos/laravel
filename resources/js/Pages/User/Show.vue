@@ -18,7 +18,7 @@ defineProps({
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-md-10 offset-md-1">
-                            <h2 v-text="user.name"></h4>
+                            <h2 v-text="user.name"></h2>
                             <p v-text="user.bio"></p>
                             <Link
                                 class="btn btn-sm btn-outline-secondary action-btn"
