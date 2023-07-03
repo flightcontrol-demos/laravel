@@ -115,7 +115,6 @@ const form = useForm({
                                 route('users.show', { name: article.user.name })
                             "
                         >
-                            <img :src="article.user.avatar_url" />
                         </Link>
                         <div class="info">
                             <Link
