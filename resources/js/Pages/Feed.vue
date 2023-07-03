@@ -76,6 +76,7 @@ export default {
                                     :key="tag.id"
                                     >{{ tag.name }}</a
                                 >
+                                
                             </div>
                         </div>
                     </div>
