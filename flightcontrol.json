@@ -4,7 +4,7 @@
     {
       "id": "production-012wn26j1",
       "name": "Production",
-      "region": "us-west-2",
+      "region": "us-east-2",
       "source": {
         "pr": false,
         "branch": "main", 
