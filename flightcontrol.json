@@ -1,6 +1,7 @@
 {
   "envVariables": {
-    "APP_DEBUG":"true"
+    "APP_DEBUG":"true",
+    "APP_KEY":"base64:rPzZRu2cKg1SCaICy7qooOzqgZJPWQHJBVCLAuh0KpA="
   },
   "environments": [{"id": "production-012wn26j1", "name": "Production", "region": "us-east-2", 
   "source": {
@@ -49,6 +50,7 @@
   "connectionStringEnvVarName": "DATABASE_URL"
   }],
    "envVariables": {
-    "APP_DEBUG":"true"
+    "APP_DEBUG":"true",
+    "APP_KEY":"base64:rPzZRu2cKg1SCaICy7qooOzqgZJPWQHJBVCLAuh0KpA="
    }}]
 }
