@@ -1,60 +1,54 @@
 {
-  "$schema": "https://app.flightcontrol.dev/schema.json",
-  "environments": [
-    {
-      "id": "production-012wn26j1",
-      "name": "Production",
-      "region": "us-east-2",
-      "source": {
-        "pr": false,
-        "branch": "main", 
-        "trigger": "push"
-      },
-      "services": [
-        {
-          "id": "laravel-GVkfh7",
-          "name": "Laravel",
-          "type": "fargate",
-          "port": 8000,
-          "buildType": "nixpacks",
-          "cpu": 0.25,
-          "memory": 0.5,
-          "basePath": ".",
-          "minInstances": 1,
-          "maxInstances": 1,
-          "installCommand":"npm install && composer install && php artisan migrate --force",
-          "startCommand": "php artisan serve --host=0.0.0.0",
-          "enableCloudfrontSwr": false,
-          "healthCheckPath": "/health",
-          "versionHistoryCount": 10,
-          "envVariables": {
-            "APP_DEBUG":"false",
-            "DATABASE_URL": {
-              "fromService": {
-                "id": "db",
-                "value": "dbConnectionString"
-              }
-            }
-          }
-        },
-        {
-          "id": "dbdatabase-tNK6P7",
-          "name": "DB_Database",
-          "port": 5432,
-          "type": "rds",
-          "engine": "postgres",
-          "instanceSize": "db.t4g.micro",
-          "storage": 20,
-          "private": false,
-          "maxStorage": 100,
-          "engineVersion": "15", 
-          "deletionProtection": false, 
-          "applyChangesImmediately": false, 
-          "autoUpgradeMinorVersions": true, 
-          "connectionStringEnvVarName": "DATABASE_URL"
-        }
-      ],
-      "envVariables": {}
-    }
-  ]
+  "envVariables": {
+    "APP_DEBUG":"true"
+  },
+  "environments": [{"id": "production-012wn26j1", "name": "Production", "region": "us-east-2", 
+  "source": {
+    "pr": false, 
+    "branch": "main", 
+    "trigger": "push"
+  }, 
+  "services": [{
+    "id": "laravel-GVkfh7", 
+    "cpu": 0.25, 
+    "name": "Laravel", 
+    "port": 8000, 
+    "type": "fargate",
+    "memory": 0.5, 
+    "basePath": ".", 
+    "buildType": "nixpacks", 
+    "autoscaling": {
+      "cpuThreshold": 70, 
+      "memoryThreshold": 70, 
+      "cooldownTimerSecs": 300, 
+      "requestsPerTarget": 500
+    }, 
+    "envVariables": {},
+    "maxInstances": 1, 
+    "minInstances": 1, 
+    "startCommand": "php artisan serve --host=0.0.0.0 ", 
+    "installCommand": "npm install && composer install && php artisan migrate --force", 
+    "healthCheckPath": "/health", 
+    "enableCloudfrontSwr": false, 
+    "versionHistoryCount": 10
+  }, 
+  {
+  "id": "dbdatabase-tNK6P7",
+  "name": "DB_Database", 
+  "port": 5432, 
+  "type": "rds", 
+  "engine": "postgres", 
+  "private": false, 
+  "storage": 20,
+  "maxStorage": 100, 
+  "instanceSize": "db.t4g.micro", 
+  "engineVersion": "15", 
+  "deletionProtection": false, 
+  "applyChangesImmediately": false,
+  "autoUpgradeMinorVersions": true, 
+  "connectionStringEnvVarName": "DATABASE_URL"
+  }],
+   "envVariables": {
+    "APP_DEBUG":"true"
+   }}]
 }
