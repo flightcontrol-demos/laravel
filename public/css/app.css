@@ -1215,11 +1215,23 @@ footer{
   background-color: #eaf1ff;
   color: #013EB2;
   display: flex;
+  justify-content: flex-start;
+
+  .container{
+
+    .logo-font{
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+    .attribution{
+      color: #19191A;  
+    }
+  }
 }
 
-.attribution{
-  color: #013EB2;  
-}
+
+
 @media (min-width: 640px) {
 
   .container {
